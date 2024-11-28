@@ -50,7 +50,7 @@
             <HBox alignment="CENTER" layoutX="272.0" layoutY="452.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="450.0">
                <children>
                   <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="165.0" text="Do not have an account?" />
-                  <Button fx:id="goToRegisterPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" style="-fx-background-radius: 5px;" text="Register">
+                  <Button fx:id="goToRegisterPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToRegisterPage" prefHeight="30.0" prefWidth="160.0" style="-fx-background-radius: 5px;" text="Register">
                      <font>
                         <Font name="Gill Sans MT" size="14.0" />
                      </font>
@@ -60,7 +60,7 @@
                   </Button>
                </children>
             </HBox>
-            <Button alignment="CENTER" layoutX="381.0" layoutY="335.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: blue; -fx-background-radius: 6px;" text="Login" textFill="WHITE">
+            <Button fx:id="login" alignment="CENTER" layoutX="381.0" layoutY="335.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: blue; -fx-background-radius: 6px;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Corbel" size="16.0" />
                </font>
