@@ -16,21 +16,21 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_management_system.controllers.StudentDetailsController">
    <children>
-      <AnchorPane prefHeight="89.0" prefWidth="950.0" style="-fx-background-color: #AAFFDD; -fx-background-radius: 10px;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+      <AnchorPane prefHeight="89.0" prefWidth="950.0" style="-fx-background-color: #00FAAA; -fx-background-radius: 10px;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
-            <Label alignment="CENTER" layoutX="1164.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="118.0" text="Central Library">
+            <Label alignment="CENTER" layoutX="1138.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="118.0" text="Central Library" AnchorPane.leftAnchor="1138.0" AnchorPane.rightAnchor="33.599999999999994" AnchorPane.topAnchor="9.0">
                <font>
                   <Font name="Kalpurush" size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="24.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="112.0" text="Dashboard">
+            <Label alignment="CENTER" layoutX="34.0" layoutY="19.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="112.0" text="Dashboard" AnchorPane.bottomAnchor="20.200000000000003" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="1145.2" AnchorPane.topAnchor="19.0">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <VBox alignment="TOP_CENTER" layoutX="6.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="193.0" spacing="20.0">
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="116.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="193.0" spacing="20.0" AnchorPane.topAnchor="120.0">
          <children>
             <Button fx:id="studentdetails" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToStudentDetailsPage" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Student Details" textFill="WHITE">
                <font>
@@ -40,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="bookdetailspage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Book Details" textFill="WHITE">
+            <Button fx:id="bookdetailspage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToBookDetailsPage" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Book Details" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>

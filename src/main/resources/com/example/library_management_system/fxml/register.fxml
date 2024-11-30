@@ -38,7 +38,7 @@
             </ImageView>
             <TextField layoutX="320.0" layoutY="206.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="374.0" promptText="Email" />
             <TextField layoutX="320.0" layoutY="313.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="374.0" promptText="Pin" />
-            <Button alignment="CENTER" layoutX="429.0" layoutY="386.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Register" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="429.0" layoutY="386.0" mnemonicParsing="false" onAction="#goToLoginPage" prefHeight="34.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Register" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT Bold" size="17.0" />
                </font>
