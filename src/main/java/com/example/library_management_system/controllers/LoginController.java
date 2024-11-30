@@ -62,6 +62,22 @@ public class LoginController {
         }
     }
 
+    public void goToLandingPage(ActionEvent event) throws Exception {
+        try {
+            // Load the Register page FXML file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/dashboard.fxml"));
+            Parent root = loader.load();
+
+            // Get the current stage and set the new scene
+            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Dashboard");
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     // Implement login functionality here (e.g., validate credentials, show success/failure message)
 //    public void login(ActionEvent event) {
 //        // Retrieve user credentials from TextField and PasswordField

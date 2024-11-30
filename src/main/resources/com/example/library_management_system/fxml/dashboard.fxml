@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_management_system.controllers.StudentDetailsController">
    <children>
       <AnchorPane prefHeight="89.0" prefWidth="950.0" style="-fx-background-color: #AAFFDD; -fx-background-radius: 10px;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
          <children>
@@ -32,38 +32,45 @@
       </AnchorPane>
       <VBox alignment="TOP_CENTER" layoutX="6.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="193.0" spacing="20.0">
          <children>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587;" text="DashBoard" textFill="WHITE">
-               <VBox.margin>
-                  <Insets top="8.0" />
-               </VBox.margin>
+            <Button fx:id="studentdetails" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToStudentDetailsPage" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Student Details" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587;" text="Student Details" textFill="WHITE">
+            <Button fx:id="bookdetailspage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Book Details" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587;" text="Book Details" textFill="WHITE">
+            <Button fx:id="issuedBooks" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToIssuedBookPage" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Issued Books" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587;" text="Issued Books" textFill="WHITE">
+            <Button fx:id="returnedBookPage" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToReturnedBookPage" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Returned Books" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587;" text="Returned Books" textFill="WHITE">
+            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587; -fx-background-radius: 6px;" text="Exit" textFill="WHITE">
                <font>
                   <Font name="Corbel Bold" size="21.0" />
                </font>
-            </Button>
-            <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="50.0" prefWidth="194.0" style="-fx-background-color: #124587;" text="Exit" textFill="WHITE">
-               <font>
-                  <Font name="Corbel Bold" size="21.0" />
-               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </VBox>

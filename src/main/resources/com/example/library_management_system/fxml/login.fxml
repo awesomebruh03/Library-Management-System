@@ -60,7 +60,7 @@
                   </Button>
                </children>
             </HBox>
-            <Button fx:id="login" alignment="CENTER" layoutX="381.0" layoutY="335.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: blue; -fx-background-radius: 6px;" text="Login" textFill="WHITE">
+            <Button fx:id="login" alignment="CENTER" layoutX="381.0" layoutY="335.0" mnemonicParsing="false" onAction="#goToLandingPage" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: blue; -fx-background-radius: 6px;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Corbel" size="16.0" />
                </font>
