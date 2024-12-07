@@ -16,6 +16,8 @@ import java.net.URL;
 
 public class LoginController {
 
+    public TextField loginEmail;
+    public PasswordField loginPassword;
     @FXML
     private TextField emailField;
 
@@ -31,6 +33,7 @@ public class LoginController {
     private Stage stage;
     private Scene scene;
 
+    //from login page to register page
     public void goToRegisterPage(ActionEvent event) throws IOException {
         // Load the FXML resource
 //        URL resource = getClass().getResource("/resources/com/example/library_management_system/fxml/register.fxml");
@@ -62,20 +65,78 @@ public class LoginController {
         }
     }
 
+    //from login page to dashboard page
     public void goToLandingPage(ActionEvent event) throws Exception {
         try {
-            // Load the Register page FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/dashboard.fxml"));
-            Parent root = loader.load();
 
-            // Get the current stage and set the new scene
-            Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Dashboard");
-            stage.show();
+            String specialCharacterPattern = ".*[!@#$%^&*(),.?\":{}|<>].*";
+            String email = loginEmail.getText();
+            String password = loginPassword.getText();
+
+            if(email.contains("@") && password.length()>=6 && password.matches(specialCharacterPattern)){
+                // Load the Register page FXML file
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/dashboard.fxml"));
+                Parent root = loader.load();
+
+                // Get the current stage and set the new scene
+                Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(root));
+                stage.setTitle("Dashboard");
+                stage.show();
+            }
+            else{
+                if(!email.contains("@")){
+                    System.out.println("Error : Email must contain @ .");
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
+                    Parent root = loader.load();
+
+                    // Get the current stage and set the new scene
+                    Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Wrong !!!");
+                    stage.show();
+                }
+                else if(password.length()<6){
+                    System.out.println("Error: Password must be 6 characters.");
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
+                    Parent root = loader.load();
+
+                    // Get the current stage and set the new scene
+                    Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Wrong !!!");
+                    stage.show();
+                }
+                else if(!password.contains(specialCharacterPattern)){
+                    System.out.println("Error: Password must contain at least one special character.");
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
+                    Parent root = loader.load();
+
+                    // Get the current stage and set the new scene
+                    Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
+                    stage.setScene(new Scene(root));
+                    stage.setTitle("Wrong !!!");
+                    stage.show();
+                }
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public TextField getLoginEmail(){
+        return loginEmail;
+    }
+    public void setLoginEmail(TextField loginEmail) {
+        this.loginEmail = loginEmail;
+    }
+
+    public PasswordField getLoginPassword(){
+        return loginPassword;
+    }
+    public void  setLoginPassword(PasswordField loginPassword){
+        this.loginPassword = loginPassword;
     }
 
     // Implement login functionality here (e.g., validate credentials, show success/failure message)

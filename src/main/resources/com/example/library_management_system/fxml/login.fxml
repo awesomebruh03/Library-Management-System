@@ -36,8 +36,8 @@
                   <Font name="Gill Sans MT Bold" size="25.0" />
                </font>
             </Label>
-            <TextField layoutX="308.0" layoutY="184.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="372.0" promptText="Email" />
-            <PasswordField layoutX="308.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="372.0" promptText="Password" />
+            <TextField fx:id="loginEmail" layoutX="308.0" layoutY="184.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="372.0" promptText="Email" />
+            <PasswordField fx:id="loginPassword" layoutX="308.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="372.0" promptText="Password" />
             <Separator layoutX="331.0" layoutY="383.0" prefHeight="5.0" prefWidth="318.0" style="-fx-color: black;" />
             <Button fx:id="forgetPassword" alignment="CENTER" layoutX="380.0" layoutY="408.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="38.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: gray; -fx-background-radius: 7px;" text="Forget Password" textFill="WHITE">
                <font>

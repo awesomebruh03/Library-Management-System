@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="275.0" prefWidth="552.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_management_system.controllers.AlertController">
+   <children>
+      <Label alignment="CENTER" layoutX="168.0" layoutY="86.0" prefHeight="51.0" prefWidth="215.0" text="Wrong Credential" textFill="RED">
+         <font>
+            <Font name="Corbel Bold" size="21.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="62.0" fitWidth="88.0" layoutX="245.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/exclamation-mark.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

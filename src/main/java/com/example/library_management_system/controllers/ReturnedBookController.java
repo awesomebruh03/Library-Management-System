@@ -25,6 +25,7 @@ public class ReturnedBookController {
         }
     }
 
+    //from returned book to student details page
     public void goToStudentDetailsPage(ActionEvent event) throws Exception {
         try {
             // Load the Register page FXML file
