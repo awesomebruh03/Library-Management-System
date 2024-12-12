@@ -6,9 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -76,7 +74,18 @@ public class LoginController {
             String email = loginEmail.getText();
             String password = loginPassword.getText();
 
-            if(email.contains("@") && password.length()>=6 && password.matches(pattern)){
+            if(email == null || email.isEmpty() || password == null || password.isEmpty()){
+                Alert nullEmailPassAlert = new Alert(Alert.AlertType.ERROR);
+                nullEmailPassAlert.setTitle("Login Error");
+                nullEmailPassAlert.setHeaderText("Enter Email and Password to Login");
+
+                // change the alert box size
+                DialogPane dialogPane = nullEmailPassAlert.getDialogPane();
+                dialogPane.setPrefSize(600,300);
+                nullEmailPassAlert.showAndWait();
+            }
+
+            else if(email.contains("@") && password.length()>=6 && password.matches(pattern)){
                 // Load the Register page FXML file
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/dashboard.fxml"));
                 Parent root = loader.load();
@@ -86,40 +95,48 @@ public class LoginController {
                 stage.setScene(new Scene(root));
                 stage.setTitle("Dashboard");
                 stage.show();
+
+                Alert loginSuccessfulAlert = new Alert(Alert.AlertType.INFORMATION);
+                loginSuccessfulAlert.setTitle("Login Successful");
+                loginSuccessfulAlert.setHeaderText("Successfully logged in");
+
+                DialogPane dialogPane = loginSuccessfulAlert.getDialogPane();
+                dialogPane.setPrefSize(600,300);
+                loginSuccessfulAlert.showAndWait();
             }
             else{
                 if(!email.contains("@")){
                     System.out.println("Error : Email must contain @ .");
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
-                    Parent root = loader.load();
+                    // show an alert if the email does not contain @ sign
+                    Alert emailAlert = new Alert(Alert.AlertType.ERROR);
+                    emailAlert.setTitle("Login Error");
+                    emailAlert.setHeaderText("Email must contain @");
 
-                    // Get the current stage and set the new scene
-                    Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Wrong !!!");
-                    stage.show();
+                    DialogPane dialogPane = emailAlert.getDialogPane();
+                    dialogPane.setPrefSize(600,300);
+                    emailAlert.showAndWait();
                 }
                 else if(password.length()<6){
                     System.out.println("Error: Password must be 6 characters.");
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
-                    Parent root = loader.load();
+                    // show an alert if the length of password is less than 6
+                    Alert passwordLengthAlert = new Alert(Alert.AlertType.ERROR);
+                    passwordLengthAlert.setTitle("Login Error");
+                    passwordLengthAlert.setHeaderText("Password length must be 6 character");
 
-                    // Get the current stage and set the new scene
-                    Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Wrong !!!");
-                    stage.show();
+                    DialogPane dialogPane = passwordLengthAlert.getDialogPane();
+                    dialogPane.setPrefSize(600,300);
+                    passwordLengthAlert.showAndWait();
                 }
                 else if(!password.contains(pattern)){
                     System.out.println("Error: Password must contain at least one special character.");
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
-                    Parent root = loader.load();
+                    // show an alert if the password does not contain any special character and uppercase and lowercase character
+                    Alert passwordPatternAlert = new Alert(Alert.AlertType.ERROR);
+                    passwordPatternAlert.setTitle("Login Error");
+                    passwordPatternAlert.setHeaderText("Password must contain at least one special character and uppercase and lowercase character");
 
-                    // Get the current stage and set the new scene
-                    Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
-                    stage.setScene(new Scene(root));
-                    stage.setTitle("Wrong !!!");
-                    stage.show();
+                    DialogPane dialogPane = passwordPatternAlert.getDialogPane();
+                    dialogPane.setPrefSize(600,300);
+                    passwordPatternAlert.showAndWait();
                 }
             }
 

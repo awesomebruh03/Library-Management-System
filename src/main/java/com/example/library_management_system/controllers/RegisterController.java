@@ -5,7 +5,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.DialogPane;
 import javafx.stage.Stage;
 
 public class RegisterController {
@@ -21,6 +23,14 @@ public class RegisterController {
             stage.setScene(new Scene(root));
             stage.setTitle("Login Page");
             stage.show();
+
+            Alert registerSuccessfulAlert = new Alert(Alert.AlertType.INFORMATION);
+            registerSuccessfulAlert.setTitle("Registration Successful");
+            registerSuccessfulAlert.setHeaderText("Successfully Registered");
+
+            DialogPane dialogPane = registerSuccessfulAlert.getDialogPane();
+            dialogPane.setPrefSize(600,300);
+            registerSuccessfulAlert.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
         }
