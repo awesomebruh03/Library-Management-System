@@ -69,11 +69,14 @@ public class LoginController {
     public void goToLandingPage(ActionEvent event) throws Exception {
         try {
 
-            String specialCharacterPattern = ".*[!@#$%^&*(),.?\":{}|<>].*";
+            // to special character check
+            String pattern = ".*[A-Z].*.*[a-z].*.*[!@#$%^&*(),.?\":{}|<>].*";
+
+            // get the value of email and password
             String email = loginEmail.getText();
             String password = loginPassword.getText();
 
-            if(email.contains("@") && password.length()>=6 && password.matches(specialCharacterPattern)){
+            if(email.contains("@") && password.length()>=6 && password.matches(pattern)){
                 // Load the Register page FXML file
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/dashboard.fxml"));
                 Parent root = loader.load();

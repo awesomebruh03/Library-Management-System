@@ -14,9 +14,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1300.0" style="-fx-background-radius: 10px 10px 10px 10px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library_management_system.controllers.LoginController">
    <children>
-      <AnchorPane layoutX="280.0" layoutY="127.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="740.0" style="-fx-background-radius: 10px; -fx-background-color: E6E6FA;">
+      <AnchorPane layoutX="280.0" layoutY="127.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="740.0" style="-fx-background-radius: 10px; -fx-background-color: E6E6FA;">
          <children>
-            <AnchorPane layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="250.0" style="-fx-background-color: #00DDDD; -fx-background-radius: 10px;">
+            <AnchorPane layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="278.0" style="-fx-background-color: #00DDDD; -fx-background-radius: 10px;">
                <children>
                   <Label alignment="CENTER" layoutX="31.0" layoutY="79.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="185.0" text="Welcome Back" textAlignment="CENTER" textFill="WHITE">
                      <font>
@@ -38,8 +38,8 @@
             </Label>
             <TextField fx:id="loginEmail" layoutX="308.0" layoutY="184.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="372.0" promptText="Email" />
             <PasswordField fx:id="loginPassword" layoutX="308.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="372.0" promptText="Password" />
-            <Separator layoutX="331.0" layoutY="383.0" prefHeight="5.0" prefWidth="318.0" style="-fx-color: black;" />
-            <Button fx:id="forgetPassword" alignment="CENTER" layoutX="380.0" layoutY="408.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="38.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: gray; -fx-background-radius: 7px;" text="Forget Password" textFill="WHITE">
+            <Separator layoutX="332.0" layoutY="409.0" prefHeight="5.0" prefWidth="350.0" style="-fx-color: black;" />
+            <Button fx:id="forgetPassword" alignment="CENTER" layoutX="384.0" layoutY="433.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="38.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: gray; -fx-background-radius: 7px;" text="Forget Password" textFill="WHITE">
                <font>
                   <Font name="Gill Sans MT" size="15.0" />
                </font>
@@ -47,7 +47,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <HBox alignment="CENTER" layoutX="272.0" layoutY="452.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="450.0">
+            <HBox alignment="CENTER" layoutX="278.0" layoutY="488.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="450.0">
                <children>
                   <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="165.0" text="Do not have an account?" />
                   <Button fx:id="goToRegisterPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#goToRegisterPage" prefHeight="30.0" prefWidth="160.0" style="-fx-background-radius: 5px;" text="Register">
