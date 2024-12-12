@@ -110,7 +110,7 @@ public class LoginController {
                     stage.setTitle("Wrong !!!");
                     stage.show();
                 }
-                else if(!password.contains(specialCharacterPattern)){
+                else if(!password.contains(pattern)){
                     System.out.println("Error: Password must contain at least one special character.");
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/library_management_system/fxml/alert.fxml"));
                     Parent root = loader.load();
