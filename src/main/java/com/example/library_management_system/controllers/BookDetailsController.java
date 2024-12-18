@@ -8,6 +8,7 @@ import javafx.stage.Stage;
 
 public class BookDetailsController {
 
+
     //from dashboard to book details page
     public void goToBookDetailsPage(ActionEvent event) throws Exception{
         try {

@@ -1,5 +1,6 @@
 package com.example.library_management_system.controllers;
 
+import com.example.library_management_system.utils.DataBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +12,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 
 public class LoginController {
 
@@ -73,6 +75,17 @@ public class LoginController {
             // get the value of email and password
             String email = loginEmail.getText();
             String password = loginPassword.getText();
+
+            Connection connection = DataBase.getConnection();
+
+            boolean validUser = DataBase.validUser("asif", "a@gmail.com");
+
+            if(validUser){
+                System.out.println("User find");
+            }
+            else {
+                System.out.println("Not find");
+            }
 
             if(email == null || email.isEmpty() || password == null || password.isEmpty()){
                 Alert nullEmailPassAlert = new Alert(Alert.AlertType.ERROR);
