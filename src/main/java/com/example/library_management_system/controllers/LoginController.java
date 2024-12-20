@@ -70,7 +70,9 @@ public class LoginController {
         try {
 
             // to special character check
-            String pattern = ".*[A-Z].*.*[a-z].*.*[!@#$%^&*(),.?\":{}|<>].*";
+            //String pattern = ".*[A-Z].*.*[a-z].*.*[!@#$%^&*(),.?\":{}|<>].*";
+            String pattern = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*(),.?\":{}|<>]).*$";
+
 
             // get the value of email and password
             String email = loginEmail.getText();
