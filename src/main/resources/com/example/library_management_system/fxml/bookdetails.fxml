@@ -131,125 +131,6 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="1016.0">
                <children>
-                  <HBox layoutX="1.0" layoutY="289.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="1002.0" spacing="25.0" AnchorPane.topAnchor="289.0">
-                     <children>
-                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
-                           <children>
-                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
-                                 <font>
-                                    <Font name="Corbel Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
-                                 <font>
-                                    <Font name="Corbel Bold" size="12.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="10.0" />
-                           </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="237.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
-                           <children>
-                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
-                                 <font>
-                                    <Font name="Corbel Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
-                                 <font>
-                                    <Font name="Corbel Bold" size="12.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="237.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
-                           <children>
-                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
-                                 <font>
-                                    <Font name="Corbel Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
-                                 <font>
-                                    <Font name="Corbel Bold" size="12.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER" layoutX="464.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
-                           <children>
-                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
-                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
-                                 <font>
-                                    <Font name="Corbel Bold" size="18.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
-                                 <font>
-                                    <Font name="Corbel Bold" size="15.0" />
-                                 </font>
-                              </Label>
-                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
-                                 <font>
-                                    <Font name="Corbel Bold" size="12.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </VBox>
-                     </children>
-                  </HBox>
                   <HBox layoutX="1.0" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="1002.0" spacing="25.0" AnchorPane.bottomAnchor="303.2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
                      <children>
                         <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
@@ -372,12 +253,131 @@
                         </VBox>
                      </children>
                   </HBox>
+                  <HBox layoutX="1.0" layoutY="289.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="1002.0" spacing="25.0" AnchorPane.topAnchor="289.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
+                           <children>
+                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
+                                 <font>
+                                    <Font name="Corbel Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="237.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
+                           <children>
+                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
+                                 <font>
+                                    <Font name="Corbel Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="237.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
+                           <children>
+                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
+                                 <font>
+                                    <Font name="Corbel Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="464.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="247.0" prefWidth="227.0" style="-fx-background-color: #FFAADD; -fx-background-radius: 8px;">
+                           <children>
+                              <ImageView fitHeight="102.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label prefHeight="34.0" prefWidth="195.0" text="Name">
+                                 <font>
+                                    <Font name="Corbel Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="30.0" prefWidth="198.0" text="Author">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="12.0" layoutY="194.0" prefHeight="30.0" prefWidth="198.0" text="Dept">
+                                 <font>
+                                    <Font name="Corbel Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" mnemonicParsing="false" prefHeight="26.0" prefWidth="126.0" style="-fx-background-color: red;" text="Remove Book" textFill="WHITE">
+                                 <font>
+                                    <Font name="Corbel Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
                </children></AnchorPane>
         </content>
       </ScrollPane>
       <AnchorPane layoutY="5.0" prefHeight="182.0" prefWidth="206.0" style="-fx-background-color: gold; -fx-background-radius: 0px 0px 25px 25px;" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="28.0" prefHeight="144.0" prefWidth="170.0" text="Book Details">
+            <Label alignment="CENTER" layoutX="14.0" layoutY="28.0" prefHeight="129.0" prefWidth="170.0" text="Book Details">
                <font>
                   <Font name="Corbel Bold" size="24.0" />
                </font>
