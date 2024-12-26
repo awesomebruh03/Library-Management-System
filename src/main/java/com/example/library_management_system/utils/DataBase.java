@@ -15,6 +15,8 @@ public class DataBase {
 
     public static void initialize() {
         try {
+            System.out.println("Initializing database...");
+
             // Check if the database file exists
             File dbFile = new File("library_management_system.db");
             if (!dbFile.exists()) {
@@ -24,7 +26,7 @@ public class DataBase {
                         System.out.println("A new database has been created.");
                     }
                 } catch (SQLException e) {
-                    System.err.println(e.getMessage());
+                    System.err.println("Error creating database: " + e.getMessage());
                 }
             } else {
                 System.out.println("Database already exists.");
@@ -33,6 +35,7 @@ public class DataBase {
             // Configure Hibernate
             Configuration configuration = new Configuration().configure();
             sessionFactory = configuration.buildSessionFactory();
+            System.out.println("Hibernate configured successfully.");
 
         } catch (Exception e) {
             e.printStackTrace();
