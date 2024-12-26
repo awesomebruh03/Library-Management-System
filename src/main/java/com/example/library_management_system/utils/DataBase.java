@@ -1,86 +1,51 @@
 package com.example.library_management_system.utils;
 
-import java.sql.*;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class DataBase {
-    private static final String URL = "jdbc:mysql://localhost:3306/library_management_system"; // Change as needed
-    private static final String USER = "root"; // Replace with your database username
-    private static final String PASSWORD = ""; // Replace with your database password
 
-    // Method to establish a database connection
-    public static Connection getConnection() {
+    private static final String DB_URL = "jdbc:sqlite:library_management_system.db";
+    private static SessionFactory sessionFactory;
+
+    public static void initialize() {
         try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (SQLException e) {
-            System.out.println("Error connecting to database: " + e.getMessage());
-            return null;
+            // Check if the database file exists
+            File dbFile = new File("library_management_system.db");
+            if (!dbFile.exists()) {
+                // Create a new database file
+                try (Connection conn = DriverManager.getConnection(DB_URL)) {
+                    if (conn != null) {
+                        System.out.println("A new database has been created.");
+                    }
+                } catch (SQLException e) {
+                    System.err.println(e.getMessage());
+                }
+            } else {
+                System.out.println("Database already exists.");
+            }
+
+            // Configure Hibernate
+            Configuration configuration = new Configuration().configure();
+            sessionFactory = configuration.buildSessionFactory();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    // Method to fetch all books
-    public static void fetchAllBooks() {
-        Connection connection = getConnection(); // Establish connection
-
-        if (connection != null) {
-            String query = "SELECT * FROM books";
-
-            // Create a Statement and Execute the Query
-            try (Statement statement = connection.createStatement();
-                 ResultSet resultSet = statement.executeQuery(query)) {
-
-                // Print all book information
-                System.out.println("BookID | BookName | BookAuthor | BookDept");
-                while (resultSet.next()) {
-                    int bookID = resultSet.getInt("BookID");
-                    String bookName = resultSet.getString("BookName");
-                    String bookAuthor = resultSet.getString("BookAuthor");
-                    String bookDept = resultSet.getString("BookDept");
-
-                    System.out.printf("%d | %s | %s | %s%n", bookID, bookName, bookAuthor, bookDept);
-                }
-            } catch (SQLException e) {
-                System.out.println("Error executing query: " + e.getMessage());
-            } finally {
-                // Close the connection
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println("Error closing connection: " + e.getMessage());
-                }
-            }
-        } else {
-            System.out.println("Failed to connect to the database.");
-        }
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 
-    public static boolean validUser(String name, String email){
-        Connection connection = getConnection();
-
-        if (connection != null) {
-            String query = "SELECT * FROM users WHERE name = ? AND email = ?"; // Adjust table/column names as needed
-
-            try (PreparedStatement statement = connection.prepareStatement(query)) {
-                statement.setString(1, name); // Set name parameter
-                statement.setString(2, email); // Set email parameter
-
-                ResultSet resultSet = statement.executeQuery();
-
-                if (resultSet.next()) { // If a row exists, the user is valid
-                    return true;
-                }
-            } catch (SQLException e) {
-                System.out.println("Error executing query: " + e.getMessage());
-            } finally {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    System.out.println("Error closing connection: " + e.getMessage());
-                }
-            }
-        } else {
-            System.out.println("Failed to connect to the database.");
+    public static void close() {
+        if (sessionFactory != null) {
+            sessionFactory.close();
         }
-
-        return false;
     }
 }

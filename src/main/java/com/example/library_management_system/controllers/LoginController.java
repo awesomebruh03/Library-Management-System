@@ -1,6 +1,7 @@
 package com.example.library_management_system.controllers;
 
 import com.example.library_management_system.utils.DataBase;
+import com.example.library_management_system.utils.ValidatesUser;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -78,16 +79,9 @@ public class LoginController {
             String email = loginEmail.getText();
             String password = loginPassword.getText();
 
-            Connection connection = DataBase.getConnection();
-
-            boolean validUser = DataBase.validUser("asif", "a@gmail.com");
-
-            if(validUser){
-                System.out.println("User find");
-            }
-            else {
-                System.out.println("Not find");
-            }
+            // check if the user is valid or not
+            ValidatesUser validatesUser = new ValidatesUser();
+            boolean validUser = validatesUser.findByUsername(email, password);
 
             if(email == null || email.isEmpty() || password == null || password.isEmpty()){
                 Alert nullEmailPassAlert = new Alert(Alert.AlertType.ERROR);

@@ -1,5 +1,6 @@
 package com.example.library_management_system;
 
+import com.example.library_management_system.utils.DataBase;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -54,5 +55,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         // Launch the JavaFX application
         launch();
+        DataBase.initialize();
     }
 }
